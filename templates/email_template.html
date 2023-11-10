@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .footer {
+            background-color: #ddd;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h2>Message From Your Blog</h2>
+        </div>
+        <div class="content">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            <hr>
+            <p>{{ message }}</p>
+        </div>
+        <div class="footer">
+            This email was sent from the contact form on <a href="YOUR_BLOG_URL">Your Blog</a>.
+        </div>
+    </div>
+</body>
+</html>
