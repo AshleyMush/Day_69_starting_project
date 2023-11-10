@@ -27,7 +27,7 @@ ckeditor = CKEditor(app)
 Bootstrap5(app)
 
 # -----------------Configure DB-------------------------
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///posts.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///posts.db")
 db.init_app(app)
 
 # Use for migration if needed
